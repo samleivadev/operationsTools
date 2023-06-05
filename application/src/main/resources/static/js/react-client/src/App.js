@@ -1,9 +1,11 @@
+import Login from './components/Authentification/login';
 import React from 'react';
 
 const App = () => {
   return (
     <div>
-      Hello React World!
+      <h1>Welcome Sam Operations Tools</h1>
+      <Login />
     </div>
   );
 }

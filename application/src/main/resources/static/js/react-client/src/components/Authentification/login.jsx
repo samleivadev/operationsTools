@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import style from '../Authentification/login.module.scss'
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -29,26 +31,30 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <br />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br />
-      <button onClick={handleLogin}>Login</button>
-      {error && <p>{error}</p>}
+    <div className={style.container}>
+      <div className={style.form}>
+        <h1>Login</h1>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <br />
+        <button onClick={handleLogin}>Login</button>
+        {error && <p>{error}</p>}
+      </div>
     </div>
   );
 };
 
 export default Login;
+
+
